@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background:darkslateblue;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+.main-box{
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.color-circle{
+    width: 500px;
+    height: 500px;
+    background: orange;
+    position: absolute;
+    bottom: 70%;
+    left: -30%;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    z-index: 1;
+}
+.user{
+    width: 90px;
+    position: relative;
+    display: block;
+    z-index: 8;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 10px rgb(219,286,206));
+    margin: 0 auto;
+    transform: translateX(-50%);
+    bottom: 13px;
+    animation: moving;
+    animation-duration: 1s;
+    cursor: pointer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.user:hover{
+    animation-play-state:paused ;
+}
+@keyframes moving{
+    from{
+        transform: translateY(3px);
+    }
+    to{
+        transform: translateY(-3px);
+    }
+}
+.username{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #e65b00;
+}
+.work{
+    font-size: 15px;
+    color: rgb(70, 78, 85);
+    text-align: center;
+    margin-bottom: 20px;
+}/*
+.followers{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    text-align: center;
+}
+*/
+.bio{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px 0;
+}
+ul li{
+    background: #e65c0058;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 2px;
+}
+.buttons{
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+.message i{
+    color: rgb(5, 255, 5);
+    font-size: 1.5rem;
+}
+.message{
+    border: 1px solid #e65b00;
+    color: #e65b00;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+}
+.follow i{
+    background-color: palevioletred;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.follow{
+    border: 1px solid #e65b00;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    background: aliceblue;
+    color: orangered;
+}
